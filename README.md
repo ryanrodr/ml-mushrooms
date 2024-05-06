@@ -1,7 +1,5 @@
 ### **Classificação de cogumelos com Machine Learning 🍄**
 
-#### **Projeto de classificação com algoritmos supervisonados**
-
 O conjunto de dados foi escolhido no Kaggle e já passou por um processo de limpeza e preparação dos dados, o que facilitou na implementação dos algoritmos. O dataset em questão contém diversas espécies de cogumelos e suas respectivas características como diâmetro da tampa, forma da tampa, altura do caule, cor do caule e entre outras características descritivas, também temos a classe alvo que determina se a espécie é comestivel (0) ou se é venenosa (1).
 
 Link do Dataset: [Mushroom Dataset (Binary Classification)](https://www.kaggle.com/datasets/prishasawhney/mushroom-dataset/data)
