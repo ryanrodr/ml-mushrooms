@@ -1,11 +1,27 @@
 ### **Classificação de cogumelos com Machine Learning 🍄**
 
-O conjunto de dados foi escolhido no Kaggle e contém diversas espécies de cogumelos e suas respectivas características como diâmetro da tampa, forma da tampa, altura do caule, cor do caule e entre outras informações descritivas que evidenciam se é comestivel (0) ou venenoso (1).
+O conjunto de dados foi escolhido no Kaggle e contém diversas espécies de cogumelos e suas respectivas características como diâmetro da tampa, forma da tampa, altura do caule, cor do caule e entre outras informações descritivas que evidenciam se é comestivel (0) ou venenoso (1). 
+
+O desafio consiste em implementar um modelo de classificação binária que possa reconhecer os padrões do conjunto de dados e consiga generalizar para novos dados, classificando se é comestivel ou venenoso.
 
 Link do Dataset: [Mushroom Dataset (Binary Classification)](https://www.kaggle.com/datasets/prishasawhney/mushroom-dataset/data)
 
-O desafio consiste em implementar um modelo de classificação binária que possa reconhecer os padrões do conjunto de dados e consiga generalizar para novos dados, classificando se é comestivel ou venenoso. Separei os dados em 70% para treinamento e 30% teste e escolhi dois modelos, sendo o **KNeighborsClassifier** e o **DecisionTreeClassifier.** Utilizei métricas para validação como matriz de confusão e acurácia do pacote `sklearn.metrics`.
+#### **DecisionTreeClassifier**
+Modelo supervisionado de aprendizado de máquina baseado em Árvores de Decisão. É utilizado para Classificação de observações, onde cada característica do dado resulta em um possível resultado e isso vai se estendendo recursivamente até chegar em todas as decisões possíveis.
+- Validando o modelo com uma Matriz de Confusão:
+  
+![DTC](https://github.com/ryanrodr/ml-mushrooms/blob/main/imagens/MatrizConfusaoDTC.png)
 
-**DecisionTreeClassifier** é um modelo supervisionado de aprendizado de máquina baseado em Árvores de Decisão. É utilizado para Classificação de observações, onde cada característica do dado resulta em um possível resultado e isso vai se estendendo recursivamente até chegar em todas as decisões possíveis. O modelo em questão chegou em uma acurácia dos dados de teste em **97.37%**.
 
-**KNeighborsClassifier** é um modelo supervisionado de aprendizado de máquina que utiliza medidas de similaridade em um conjunto de dados para reconhecimento de padrões. Ele realiza a Classificação das observações identificando os k-vizinhos mais próximos. KNN chegou em uma acurácia de **98.68%**.
+#### **KNeighborsClassifier**
+Modelo supervisionado de aprendizado de máquina que utiliza medidas de similaridade em um conjunto de dados para reconhecimento de padrões. Ele realiza a Classificação das observações identificando os k-vizinhos mais próximos.
+- Validando o modelo com uma Matriz de Confusão:
+
+![KNN](https://github.com/ryanrodr/ml-mushrooms/blob/main/imagens/MatrizConfusaoKNN.png)
+
+#### Conclusão
+Validando os resultados pela Matriz de Confusão é possível identificar que o melhor modelo é o KNeighborsClassifier por ter uma taxa de Falsos Negativos menores que o DecisionTreeClassifier. Uma das métricas do projeto é focar na classificação dos cogumelos venenosos minimizando a quantidade de erros. 
+- KNN classificou 86 cogumelos como comestiveis que na verdade eram venenosos
+- Acurácia do modelo KNeighborsClassifier - 98.68%
+- DTC classificou 194 cogumelos como comestiveis que na verdade eram venenosos
+- Acurácia do modelo DecisionTreeClassifier - 97.32%
