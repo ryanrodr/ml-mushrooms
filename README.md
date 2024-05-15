@@ -20,7 +20,7 @@ Modelo supervisionado de aprendizado de máquina que utiliza medidas de similari
 ![KNN](https://github.com/ryanrodr/ml-mushrooms/blob/main/imagens/MatrizConfusaoKNN.png)
 
 #### Conclusão
-Validando os resultados pela Matriz de Confusão é possível identificar que o melhor modelo é o KNeighborsClassifier por ter uma taxa de Falsos Negativos menores que o DecisionTreeClassifier. Uma das métricas do projeto é focar na classificação dos cogumelos venenosos minimizando a quantidade de erros. 
+Os resultados da Matriz de Confusão identificam que o melhor modelo é o **KNeighborsClassifier** por ter uma taxa de Falsos Negativos menor que o **DecisionTreeClassifier**. Uma das métricas do projeto é focar na classificação dos cogumelos venenosos minimizando a quantidade de erros.
 - KNN classificou 86 cogumelos como comestiveis que na verdade eram venenosos
 - Acurácia do modelo KNeighborsClassifier - 98.68%
 - DTC classificou 194 cogumelos como comestiveis que na verdade eram venenosos
